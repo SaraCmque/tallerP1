@@ -14,6 +14,7 @@ def home(request):
     else:
         movies = Movie.objects.all()
     return render(request, 'home.html', {'searchTerm':searchTerm, 'movies':movies})
+    return HttpResponse('<h1>Welcome to Home Page! :D</h1>')
 
 def about(request):
     return render(request, 'about.html')
